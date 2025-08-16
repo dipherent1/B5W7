@@ -103,8 +103,4 @@ dbt docs generate --profiles-dir /workspace/dbt
 - https://t.me/tikvahpharma
 - More from: https://et.tgstat.com/medicine
 
-## Notes
 
-- This template includes sensible defaults, tests, and logging. 
-- For YOLO, ultralytics will download a pretrained model on first run inside the container.
-- All secrets are managed via `.env` / environment variables.
