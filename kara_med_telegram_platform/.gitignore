@@ -1,0 +1,12 @@
+.env
+__pycache__/
+.dbt/
+dbt/target/
+dbt/.user/
+*.pyc
+*.pyo
+*.DS_Store
+data/raw/*.json
+data/raw/images/*
+dist/
+*.zip

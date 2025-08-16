@@ -1,0 +1,16 @@
+name: "kara_dbt"
+version: "1.0.0"
+profile: "kara"
+model-paths: ["models"]
+target-path: "target"
+clean-targets:
+  - "target"
+  - "dbt_packages"
+models:
+  kara_dbt:
+    staging:
+      +schema: staging
+      +materialized: view
+    marts:
+      +schema: mart
+      +materialized: table

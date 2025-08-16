@@ -1,0 +1,32 @@
+version: 2
+
+models:
+  - name: dim_channels
+    columns:
+      - name: channel_id
+        tests: [unique, not_null]
+      - name: channel_name
+        tests: [not_null]
+  - name: dim_dates
+    columns:
+      - name: day
+        tests: [unique, not_null]
+  - name: fct_messages
+    columns:
+      - name: fact_id
+        tests: [unique, not_null]
+      - name: message_id
+        tests: [not_null]
+  - name: fct_image_detections
+    columns:
+      - name: fact_id
+        tests: [not_null]
+      - name: detected_object_class
+        tests: [not_null]
+
+tests:
+  - name: no_empty_messages
+    sql: |
+      select * from {{ ref('fct_messages') }}
+      where coalesce(message_text, '') = ''
+      and has_image = false

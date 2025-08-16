@@ -1,0 +1,28 @@
+# Core
+python-dotenv==1.0.1
+pydantic==2.9.2
+fastapi==0.115.0
+uvicorn[standard]==0.30.6
+sqlalchemy==2.0.35
+psycopg2-binary==2.9.9
+alembic==1.13.2
+pandas==2.2.2
+orjson==3.10.7
+loguru==0.7.2
+
+# Telegram
+Telethon==1.36.0
+
+# Orchestration
+dagster==1.9.4
+dagster-webserver==1.9.4
+
+# dbt
+dbt-core==1.8.6
+dbt-postgres==1.8.2
+
+# YOLO
+ultralytics==8.3.39
+opencv-python-headless==4.10.0.84
+Pillow==10.4.0
+numpy==1.26.4
